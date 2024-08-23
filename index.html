@@ -1,0 +1,69 @@
+
+<link href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css?ver=@@b-version" rel="stylesheet">
+<link href="start.css" rel="stylesheet">
+
+
+<style type="text/css">
+	#hoverme, #hoverme2{width:100%; height:120px; position: relative;}
+	#hovered, #hovered2{width:100%;margin-top:-1px; min-height:130px; max-height:350px; display:none;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="sound-mouseover.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#hoverme").hover(function(){
+			$("#hovered").stop().slideToggle();
+		});
+
+		$("#hoverme2").hover(function(){
+			$("#hovered2").stop().slideToggle();
+		});
+	});	
+</script>
+
+
+<div style="margin:20px auto; max-width: 800px;">
+	<!-- <a href="#" onmouseover="playclip();"><img src="Ad.jpg" width="800" height="125" border="0" alt="image"></a>
+	<br>
+	<br> -->
+
+	<!-- <audio>
+	<source src="biko.mp3"></source>
+	<source src="biko.ogg"></source>
+	</audio>
+	<div id="sounddiv"><bgsound id="sound"></div>
+ -->
+
+
+	<div id="hoverme"><img src="Betika.gif" width="100%" height="100%" border="0" alt="image">
+	<div id="hovered">
+		<iframe id="video" width="100%" height="500" frameborder="0" src="https://www.youtube.com/embed/Y19LhpcFPyI?rel=0" allowfullscreen></iframe>
+	</div>
+	</div>
+	<br>
+
+
+
+	<!-- <div id="hoverme2"><img src="Ad.jpg" width="100%" height="100%" border="0" alt="image"></div>
+	<div id="hovered2">
+		<img width="100%" src="biko-routine.png"> -->
+	</div>
+
+</div>
+
+
+
+<script>
+	$(document).ready(function(){
+		$playersrc = $('#video').attr('src');
+		$('#hoverme').hover(function(){
+			$('#video').attr('src',$playersrc+'&autoplay=1');
+		});
+		$('#hoverme').mouseout(function(){
+			$('#video').attr('src',$playersrc);
+		});
+    });
+</script>
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="start.js"></script>
